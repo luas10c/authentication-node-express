@@ -1,0 +1,43 @@
+{
+  "name": "microservice-account",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development tsx watch src/server.ts",
+    "build": "rimraf dist && tsc",
+    "type-check": "tsc --project tsconfig.json",
+    "commit": "cz",
+    "migrate": "dotenv -e .env.development -- prisma migrate dev --schema src/prisma/schema.prisma"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.0.3",
+    "@commitlint/config-conventional": "^17.0.3",
+    "@types/bcrypt": "^5.0.0",
+    "@types/cors": "^2.8.12",
+    "@types/express": "^4.17.13",
+    "@types/jsonwebtoken": "^8.5.8",
+    "@types/node": "^18.7.8",
+    "commitizen": "^4.2.5",
+    "cross-env": "^7.0.3",
+    "dotenv-cli": "^6.0.0",
+    "eslint": "^8.22.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "husky": "^8.0.1",
+    "prettier": "^2.7.1",
+    "prisma": "^4.2.1",
+    "rimraf": "^3.0.2",
+    "tsx": "^3.8.2",
+    "typescript": "^4.7.4"
+  },
+  "license": "UNLICENSED",
+  "dependencies": {
+    "@prisma/client": "^4.2.1",
+    "bcrypt": "^5.0.1",
+    "cors": "^2.8.5",
+    "dayjs": "^1.11.5",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "express-async-errors": "^3.1.1",
+    "jsonwebtoken": "^8.5.1",
+    "zod": "^3.18.0"
+  }
+}
